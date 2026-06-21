@@ -3,156 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uswa Nazish - Portfolio</title>
+    <title>Uswa Nazish | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<header>
-    <div class="logo">Uswa Nazish</div>
+<div class="sidebar">
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <div class="profile">
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="home">
+        <img src="profile.jpg" alt="Profile">
 
-    <div class="hero-content">
+        <h2>Uswa Nazish</h2>
 
-        <div class="hero-text">
-            <h1>Hi, I'm <span>Uswa Nazish</span></h1>
-            <p>Computer Science Student | Web Developer | AI & Machine Learning Enthusiast</p>
+        <p>Computer Science Student</p>
 
-            <a href="#contact" class="btn">Contact Me</a>
-            <a href="#projects" class="btn-outline">My Work</a>
-        </div>
-
-        <div class="hero-img">
-            <img src="profile.jpg" alt="Profile Picture">
-        </div>
+        <span>COMSATS University Vehari Campus</span>
 
     </div>
-</section>
 
-<!-- ================= ABOUT ================= -->
-<section id="about">
-    <h2>About Me</h2>
+    <ul class="menu">
 
-    <p class="center-text">
-        I am <b>Uswa Nazish</b>, a passionate Computer Science student at COMSATS University Vehari Campus.
-        I specialize in web development and have interest in Artificial Intelligence and Machine Learning.
-        My goal is to become a professional software engineer and build impactful digital solutions.
-    </p>
-</section>
+        <li onclick="showSection('home')">🏠 Home</li>
 
-<!-- ================= EDUCATION ================= -->
-<section id="education">
-    <h2>Education</h2>
+        <li onclick="showSection('education')">🎓 Education</li>
 
-    <div class="cards">
+        <li onclick="showSection('skills')">💻 Skills</li>
 
-        <div class="card">
-            <h3>University</h3>
-            <p>COMSATS University Vehari Campus<br>3rd Semester - CGPA: 3.45</p>
+        <li onclick="showSection('projects')">🚀 Projects</li>
+
+        <li onclick="showSection('contact')">📞 Contact</li>
+
+    </ul>
+
+</div>
+
+
+<div class="main-content">
+
+    <section id="home" class="section active">
+
+        <h1>Hello, I'm Uswa Nazish</h1>
+
+        <h3>Web Developer & Website Creator</h3>
+
+        <p>
+            Passionate Computer Science student with strong interest in
+            Web Development, Software Engineering and Database Systems.
+        </p>
+
+        <div class="info-cards">
+
+            <div class="card">
+                <h2>Semester</h2>
+                <p>3rd Semester</p>
+            </div>
+
+            <div class="card">
+                <h2>CGPA</h2>
+                <p>3.45</p>
+            </div>
+
+            <div class="card">
+                <h2>University</h2>
+                <p>COMSATS Vehari</p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>College</h3>
-            <p>PIAST College Vehari</p>
+    </section>
+
+
+    <section id="education" class="section">
+
+        <h1>Education</h1>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Matric</h3>
+                <p>workers welfare school mian channu</p>
+                <span>2022</span>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Intermediate</h3>
+                <p>PIAST college Vehari Campus</p>
+                <span>2024</span>
+            </div>
+
+            <div class="timeline-item">
+                <h3>BS Computer Science</h3>
+                <p>COMSATS University Vehari Campus</p>
+                <span>3rd Semester</span>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>School</h3>
-            <p>Workers Welfare School Mian Channu</p>
+    </section>
+
+
+    <section id="skills" class="section">
+
+        <h1>Skills</h1>
+
+        <div class="skill">
+
+            <h4>Website Creator</h4>
+            <div class="bar"><span style="width:95%"></span></div>
+
+            <h4>Web Development</h4>
+            <div class="bar"><span style="width:90%"></span></div>
+
+            <h4>HTML & CSS</h4>
+            <div class="bar"><span style="width:92%"></span></div>
+
+            <h4>JavaScript</h4>
+            <div class="bar"><span style="width:80%"></span></div>
+
         </div>
 
-    </div>
-</section>
+    </section>
 
-<!-- ================= SKILLS ================= -->
-<section id="skills">
-    <h2>Skills</h2>
 
-    <div class="cards">
+    <section id="projects" class="section">
 
-        <div class="card">
-            <h3>Web Development</h3>
-            <p>HTML, CSS, JavaScript (Frontend Development)</p>
+        <h1>Projects</h1>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>University Management System</h3>
+                <p>Database based management system project.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Online Paper Management System</h3>
+                <p>Portal for paper management and records.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Course Registration Portal</h3>
+                <p>Student course registration web portal.</p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>AI / Machine Learning</h3>
-            <p>Basic understanding of AI models and concepts</p>
+    </section>
+
+
+    <section id="contact" class="section">
+
+        <h1>Contact</h1>
+
+        <div class="contact-box">
+
+            <p>📧 uswanazish311@gmail.com</p>
+
+            <p>📱 03157540218</p>
+
+            <p>📍 Vehari, Pakistan</p>
+
         </div>
 
-        <div class="card">
-            <h3>Problem Solving</h3>
-            <p>Logical thinking and programming skills</p>
-        </div>
+    </section>
 
-    </div>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>University Management System</h3>
-            <p>Database-based system for managing university records</p>
-        </div>
-
-        <div class="card">
-            <h3>Online Paper Management System</h3>
-            <p>System for managing exams and papers digitally</p>
-        </div>
-
-        <div class="card">
-            <h3>Course Registration Portal</h3>
-            <p>Web system for student course registration</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact">
-    <h2>Contact Me</h2>
-
-    <div class="contact-box">
-        <p><b>Email:</b> uswanazish311@gmail.com</p>
-        <p><b>Phone:</b> 03157540218</p>
-        <p><b>Address:</b> Kacha Khuh, Khanewal</p>
-    </div>
-
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-
-        <button type="submit" class="btn">Send Message</button>
-    </form>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer>
-    <p>© 2026 Uswa Nazish | All Rights Reserved</p>
-</footer>
+</div>
 
 <script src="script.js"></script>
 
