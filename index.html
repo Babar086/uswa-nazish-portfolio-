@@ -1,182 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uswa Nazish | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uswa Nazish | Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
 
-    <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* TOP NAV */
+.navbar{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+    background:#111827;
+    position:sticky;
+    top:0;
+}
+
+.navbar button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    padding:10px 15px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.navbar button:hover,
+.navbar button.active{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* SECTIONS */
+.section{
+    display:none;
+    padding:50px;
+    text-align:center;
+}
+
+.section.active{
+    display:block;
+}
+
+/* CARDS */
+.card{
+    background:#1e293b;
+    padding:20px;
+    margin:10px;
+    display:inline-block;
+    border-radius:10px;
+}
+
+/* SKILLS BAR */
+.bar{
+    background:#334155;
+    height:10px;
+    width:300px;
+    margin:10px auto;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.bar span{
+    display:block;
+    height:100%;
+    background:#38bdf8;
+}
+</style>
 </head>
 
 <body>
 
-<div class="sidebar">
+<!-- NAVIGATION -->
+<div class="navbar">
+    <button onclick="showSection('home', this)" class="active">Home</button>
+    <button onclick="showSection('about', this)">About</button>
+    <button onclick="showSection('education', this)">Education</button>
+    <button onclick="showSection('skills', this)">Skills</button>
+    <button onclick="showSection('projects', this)">Projects</button>
+    <button onclick="showSection('contact', this)">Contact</button>
+</div>
 
-    <div class="profile">
+<!-- HOME -->
+<section id="home" class="section active">
+    <h1>Hello, I'm Uswa Nazish</h1>
+    <p>Web Developer & Computer Science Student</p>
+</section>
 
-        <img src="profile.jpg" alt="Profile">
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h1>About Me</h1>
+    <p>Computer Science student with interest in Web Development, Software Engineering and Databases.</p>
 
-        <h2>Uswa Nazish</h2>
+    <div class="card">Semester: 3rd</div>
+    <div class="card">CGPA: 3.45</div>
+    <div class="card">University: COMSATS Vehari</div>
+</section>
 
-        <p>Computer Science Student</p>
+<!-- EDUCATION -->
+<section id="education" class="section">
+    <h1>Education</h1>
 
-        <span>COMSATS University Vehari Campus</span>
-
+    <div class="card">
+        Matric - 2022 (Workers Welfare School)
     </div>
 
-    <ul class="menu">
+    <div class="card">
+        Intermediate - 2024 (PIAST College Vehari)
+    </div>
 
-        <li onclick="showSection('home')">🏠 Home</li>
+    <div class="card">
+        BSCS - COMSATS Vehari (3rd Semester)
+    </div>
+</section>
 
-        <li onclick="showSection('education')">🎓 Education</li>
+<!-- SKILLS -->
+<section id="skills" class="section">
+    <h1>Skills</h1>
 
-        <li onclick="showSection('skills')">💻 Skills</li>
+    <p>Web Development</p>
+    <div class="bar"><span style="width:90%"></span></div>
 
-        <li onclick="showSection('projects')">🚀 Projects</li>
+    <p>HTML & CSS</p>
+    <div class="bar"><span style="width:92%"></span></div>
 
-        <li onclick="showSection('contact')">📞 Contact</li>
+    <p>JavaScript</p>
+    <div class="bar"><span style="width:80%"></span></div>
+</section>
 
-    </ul>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h1>Projects</h1>
 
-</div>
+    <div class="card">University Management System</div>
+    <div class="card">Online Paper Management System</div>
+    <div class="card">Course Registration Portal</div>
+</section>
 
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h1>Contact</h1>
 
-<div class="main-content">
+    <div class="card">Email: uswanazish311@gmail.com</div>
+    <div class="card">Phone: 0315-7540218</div>
+    <div class="card">Location: Vehari, Pakistan</div>
+</section>
 
-    <section id="home" class="section active">
+<script>
+function showSection(id, btn){
 
-        <h1>Hello, I'm Uswa Nazish</h1>
+    let sections = document.querySelectorAll(".section");
+    sections.forEach(sec => sec.classList.remove("active"));
 
-        <h3>Web Developer & Website Creator</h3>
+    document.getElementById(id).classList.add("active");
 
-        <p>
-            Passionate Computer Science student with strong interest in
-            Web Development, Software Engineering and Database Systems.
-        </p>
+    let buttons = document.querySelectorAll(".navbar button");
+    buttons.forEach(b => b.classList.remove("active"));
 
-        <div class="info-cards">
-
-            <div class="card">
-                <h2>Semester</h2>
-                <p>3rd Semester</p>
-            </div>
-
-            <div class="card">
-                <h2>CGPA</h2>
-                <p>3.45</p>
-            </div>
-
-            <div class="card">
-                <h2>University</h2>
-                <p>COMSATS Vehari</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section id="education" class="section">
-
-        <h1>Education</h1>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-                <h3>Matric</h3>
-                <p>workers welfare school mian channu</p>
-                <span>2022</span>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Intermediate</h3>
-                <p>PIAST college Vehari Campus</p>
-                <span>2024</span>
-            </div>
-
-            <div class="timeline-item">
-                <h3>BS Computer Science</h3>
-                <p>COMSATS University Vehari Campus</p>
-                <span>3rd Semester</span>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section id="skills" class="section">
-
-        <h1>Skills</h1>
-
-        <div class="skill">
-
-            <h4>Website Creator</h4>
-            <div class="bar"><span style="width:95%"></span></div>
-
-            <h4>Web Development</h4>
-            <div class="bar"><span style="width:90%"></span></div>
-
-            <h4>HTML & CSS</h4>
-            <div class="bar"><span style="width:92%"></span></div>
-
-            <h4>JavaScript</h4>
-            <div class="bar"><span style="width:80%"></span></div>
-
-        </div>
-
-    </section>
-
-
-    <section id="projects" class="section">
-
-        <h1>Projects</h1>
-
-        <div class="project-grid">
-
-            <div class="project-card">
-                <h3>University Management System</h3>
-                <p>Database based management system project.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Online Paper Management System</h3>
-                <p>Portal for paper management and records.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Course Registration Portal</h3>
-                <p>Student course registration web portal.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section id="contact" class="section">
-
-        <h1>Contact</h1>
-
-        <div class="contact-box">
-
-            <p>📧 uswanazish311@gmail.com</p>
-
-            <p>📱 03157540218</p>
-
-            <p>📍 Vehari, Pakistan</p>
-
-        </div>
-
-    </section>
-
-</div>
-
-<script src="script.js"></script>
+    btn.classList.add("active");
+}
+</script>
 
 </body>
 </html>
